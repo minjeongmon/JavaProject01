@@ -39,7 +39,7 @@ public class SalesFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame("¸ÅÃâ°ü¸® ÆäÀÌÁö");
+		frame = new JFrame("Sales Page");
 
 		frame.setSize(700, 780);
 		frame.setResizable(false);
@@ -52,9 +52,9 @@ public class SalesFrame {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
-		// »óÀ§ ¹öÆ° ¹öÆ° ´©¸¦ ¶§ ¸¶´Ù ÆäÀÌÁö ÀÌµ¿ //
+		// ë²„íŠ¼ í´ë¦­ ì‹œ ê° í˜ì´ì§€ë¡œ ì´ë™ //
 
-		JButton btn_Order = new JButton("ÁÖ ¹® °ü ¸®");
+		JButton btn_Order = new JButton("ì£¼ ë¬¸ ê´€ ë¦¬");
 		btn_Order.setBounds(12, 10, 200, 80);
 		panel.add(btn_Order);
 		btn_Order.addActionListener(new ActionListener() {
@@ -69,7 +69,7 @@ public class SalesFrame {
 
 		});
 
-		JButton btn_Inven = new JButton("Àç °í °ü ¸®");
+		JButton btn_Inven = new JButton("ì¬ ê³  ê´€ ë¦¬");
 		btn_Inven.setBounds(247, 10, 200, 80);
 		panel.add(btn_Inven);
 		btn_Inven.addActionListener(new ActionListener() {
@@ -84,7 +84,7 @@ public class SalesFrame {
 
 		});
 
-		JButton btn_Sales = new JButton("¸Å Ãâ °ü ¸®");
+		JButton btn_Sales = new JButton("ë§¤ ì¶œ ê´€ ë¦¬");
 		btn_Sales.setBounds(472, 10, 200, 80);
 		panel.add(btn_Sales);
 

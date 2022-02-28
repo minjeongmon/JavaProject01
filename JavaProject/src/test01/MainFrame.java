@@ -1,7 +1,6 @@
 package test01;
 
 import java.awt.EventQueue;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,6 +19,7 @@ public class MainFrame {
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -44,7 +44,7 @@ public class MainFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
+		frame = new JFrame("Main Page");
 		frame.setSize(700, 780);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
@@ -62,26 +62,24 @@ public class MainFrame {
 		panel_1.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Main Page");
-		lblNewLabel.setFont(new Font("³ª´®°íµñ ExtraBold", Font.BOLD, 20));
 		lblNewLabel.setBounds(295, 10, 111, 30);
 		panel_1.add(lblNewLabel);
 
-		// ID, PW ÀÔ·ÂÇÏ´Â ÆĞ³Î //
+		// id, pw ì…ë ¥ì°½ //
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(0, 49, 684, 495);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
 
-		JLabel id = new JLabel("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä!");
-		JLabel pw = new JLabel("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä!");
-		id.setFont(new Font("³ª´®°íµñ", Font.BOLD, 15));
-		pw.setFont(new Font("³ª´®°íµñ", Font.BOLD, 15));
+		JLabel id = new JLabel("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”!");
+		JLabel pw = new JLabel("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”!");
+
 
 		JButton btnLogin = new JButton("Login");
-		btnLogin.setFont(new Font("³ª´®°íµñ", Font.BOLD, 15));
+
 		JTextField txtId = new JTextField(10);
-		JPasswordField txtPw = new JPasswordField(15); // ºñ¹Ğ¹øÈ£ ÀÚµ¿ ¾ÏÈ£È­
+		JPasswordField txtPw = new JPasswordField(15); // ë¹„ë°€ë²ˆí˜¸ ìë™ ì•”í˜¸í™”
 
 		id.setBounds(180, 150, 150, 30);
 		pw.setBounds(180, 230, 150, 30);
@@ -95,7 +93,7 @@ public class MainFrame {
 		panel_2.add(txtPw);
 		panel_2.add(btnLogin);
 
-		// ·Î±×ÀÎ DB ÀÚ·á ³Ö±â - ÇöÀç´Â ¾×¼Ç Ãß°¡¸¸ ÇÔ //
+		// ë¡œê·¸ì¸ DB ê°€ì ¸ì˜¤ëŠ” ê³³ //
 		btnLogin.addActionListener(new ActionListener() {
 
 			@SuppressWarnings("deprecation")
@@ -105,9 +103,11 @@ public class MainFrame {
 				String pw = "1234";
 
 				if (id.equals(txtId.getText()) && pw.equals(txtPw.getText())) {
-					JOptionPane.showMessageDialog(null, "·Î±×ÀÎ ¼º°ø! ÇÏ´Ü ¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä.");
+					JOptionPane.showMessageDialog(null, "ë¡œê·¸ì¸ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
+					
+					
 				} else {
-					JOptionPane.showMessageDialog(null, "¾ÆÀÌµğ ¶Ç´Â ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä.");
+					JOptionPane.showMessageDialog(null, "ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”.");
 				}
 
 			}
@@ -119,29 +119,18 @@ public class MainFrame {
 		panel.add(panel_3);
 		panel_3.setLayout(null);
 
-		// ¹öÆ° ´©¸£¸é Å°¿À½ºÅ© ÆäÀÌÁö ÀÌµ¿ ÇÏ±â //
+		// í‚¤ì˜¤ìŠ¤í¬, ê´€ë¦¬ìí˜ì´ì§€ ì´ë™ ë²„íŠ¼ //
 
-		JButton kiosk_btn = new JButton("Å°¿À½ºÅ© ÆäÀÌÁö");
-		kiosk_btn.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		JButton kiosk_btn = new JButton("í‚¤ì˜¤ìŠ¤í¬");
 		kiosk_btn.setBounds(90, 36, 200, 100);
 		panel_3.add(kiosk_btn);
 
-		JButton admin_btn = new JButton("°ü¸®ÀÚ ÆäÀÌÁö");
-		admin_btn.setFont(new Font("³ª´®°íµñ", Font.BOLD, 15));
+		JButton admin_btn = new JButton("ê´€ë¦¬ìí˜ì´ì§€");
 		admin_btn.setBounds(400, 36, 200, 100);
 		panel_3.add(admin_btn);
 		
-		// °ü¸®ÀÚÆäÀÌÁö ¹öÆ° ´©¸£¸é °ü¸®ÀÚ ÆäÀÌÁö·Î ÀÌµ¿ ÇÏ±â //
-		admin_btn.addActionListener(new ActionListener() {
+		// í˜ì´ì§€ ì´ë™ //
+		
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				AdminFrame admin = new AdminFrame();
-				admin.setVisible(true);
-				frame.dispose();
-				
-			}
-			
-		});
 	}
 }

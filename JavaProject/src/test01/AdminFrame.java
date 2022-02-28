@@ -15,6 +15,7 @@ public class AdminFrame {
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,7 +40,7 @@ public class AdminFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame("°ü¸®ÀÚ ÆäÀÌÁö");
+		frame = new JFrame("Admin Page");
 
 		frame.setSize(700, 780);
 		frame.setResizable(false);
@@ -51,10 +52,12 @@ public class AdminFrame {
 		frame.getContentPane().add(panel);
 		panel.setBounds(0, 0, 684, 741);
 		panel.setLayout(null);
+		
+		// ë²„íŠ¼ í´ë¦­ ì‹œ ê° í˜ì´ì§€ë¡œ ì´ë™ //
 
-		JButton btn_Order = new JButton("ÁÖ ¹® °ü ¸®");
-		JButton btn_Inven = new JButton("Àç °í °ü ¸®");
-		JButton btn_Sales = new JButton("¸Å Ãâ °ü ¸®");
+		JButton btn_Order = new JButton("ì£¼ ë¬¸ ê´€ ë¦¬");
+		JButton btn_Inven = new JButton("ìƒ í’ˆ ê´€ ë¦¬");
+		JButton btn_Sales = new JButton("ë§¤ ì¶œ ê´€ ë¦¬");
 
 		btn_Order.setBounds(20, 330, 200, 80);
 		btn_Inven.setBounds(240, 330, 200, 80);

@@ -39,7 +39,7 @@ public class OrdersFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame("ÁÖ¹®°ü¸® ÆäÀÌÁö");
+		frame = new JFrame("Orders Page");
 		frame.setSize(700, 780);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
@@ -51,13 +51,13 @@ public class OrdersFrame {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
-		// »óÀ§ ¹öÆ° ¹öÆ° ´©¸¦ ¶§ ¸¶´Ù ÆäÀÌÁö ÀÌµ¿ //
+		// ë²„íŠ¼ í´ë¦­ ì‹œ ê° í˜ì´ì§€ë¡œ ì´ë™ //
 
-		JButton btn_Order = new JButton("ÁÖ ¹® °ü ¸®");
+		JButton btn_Order = new JButton("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½");
 		btn_Order.setBounds(12, 10, 200, 80);
 		panel.add(btn_Order);
 
-		JButton btn_Inven = new JButton("Àç °í °ü ¸®");
+		JButton btn_Inven = new JButton("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½");
 		btn_Inven.setBounds(247, 10, 200, 80);
 		panel.add(btn_Inven);
 		
@@ -73,7 +73,7 @@ public class OrdersFrame {
 			
 		});
 
-		JButton btn_Sales = new JButton("¸Å Ãâ °ü ¸®");
+		JButton btn_Sales = new JButton("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½");
 		btn_Sales.setBounds(472, 10, 200, 80);
 		panel.add(btn_Sales);
 		
