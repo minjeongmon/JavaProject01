@@ -82,6 +82,7 @@ public class OrderPage {
 		
 		table = new JTable();
 		scrollPane.setViewportView(table);
+		table.setRowHeight(30);
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 				{null, null, null, null, null, null},

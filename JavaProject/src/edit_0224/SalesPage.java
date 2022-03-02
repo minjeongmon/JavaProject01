@@ -7,11 +7,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.JLabel;
 
 public class SalesPage {
 
@@ -53,61 +53,60 @@ public class SalesPage {
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel);
 		panel.setBounds(0, 0, 684, 741);
-		panel.setLayout(null);
 
 		JButton orderBtn = new JButton("주 문 관 리");
+		orderBtn.setBounds(12, 85, 150, 70);
 		orderBtn.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		JButton goodsBtn = new JButton("상 품 관 리");
+		goodsBtn.setBounds(182, 85, 150, 70);
 		goodsBtn.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		JButton salesBtn = new JButton("매 출 관 리");
+		salesBtn.setBounds(352, 85, 150, 70);
 		salesBtn.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		JButton mainBtn = new JButton("메 인 화 면");
-		mainBtn.setFont(new Font("맑은 고딕", Font.BOLD, 20));
-
-		orderBtn.setBounds(12, 85, 150, 70);
-		goodsBtn.setBounds(182, 85, 150, 70);
-		salesBtn.setBounds(352, 85, 150, 70);
 		mainBtn.setBounds(522, 85, 150, 70);
+		mainBtn.setFont(new Font("맑은 고딕", Font.BOLD, 20));
+		panel.setLayout(null);
 		panel.add(orderBtn);
 		panel.add(goodsBtn);
 		panel.add(salesBtn);
 		panel.add(mainBtn);
-		
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(12, 240, 660, 250);
 		panel.add(scrollPane);
+
+		
+		
+		// 테이블에 DB 삽입 //
 		
 		JTable table = new JTable();
 		scrollPane.setViewportView(table);
+		table.setRowHeight(30);
 		table.setModel(new DefaultTableModel(
-			new Object[][] {
-				{null, null, null, null, null, null},
-				{null, null, null, null, null, null},
-				{null, null, null, null, null, null},
-				{null, null, null, null, null, null},
-				{null, null, null, null, null, null},
-				{null, null, null, null, null, null},
-			},
-			new String[] {
-				"상품번호", "상품명", "상품명", "판매갯수", "개당금액", "총 금액"
-			}
-		));
-		
-		JLabel dayLabel = new JLabel("날 짜 : ");
-		dayLabel.setFont(new Font("맑은 고딕", Font.BOLD, 15));
-		dayLabel.setBounds(145, 188, 55, 15);
-		panel.add(dayLabel);
-		
-		JButton btnNewButton = new JButton("CLICK");
-		btnNewButton.setFont(new Font("맑은 고딕", Font.BOLD, 15));
-		btnNewButton.setBounds(464, 180, 100, 30);
-		panel.add(btnNewButton);
-		table.getColumnModel().getColumn(0).setMinWidth(30);
+				new Object[][] { { null, null, null, null, null, null }, { null, null, null, null, null, null },
+						{ null, null, null, null, null, null }, { null, null, null, null, null, null },
+						{ null, null, null, null, null, null }, { null, null, null, null, null, null }, },
+				new String[] { "상품번호", "상품명", "상품명", "판매갯수", "개당금액", "총 금액" }));
 
-		// 버튼 클릭 시 각 페이지로 이동 할 수 있음 //
-		// 인트로 페이지를 ㄸㅏ로 나눠야 할까... 뒤로 가기를 모르겠음 // 
+		JLabel dayLabel = new JLabel("날 짜 : ");
+		dayLabel.setBounds(122, 190, 55, 15);
+		dayLabel.setFont(new Font("맑은 고딕", Font.BOLD, 15));
+		panel.add(dayLabel);
+
+		JButton btnNewButton = new JButton("CLICK");
+		btnNewButton.setBounds(464, 180, 100, 30);
+		btnNewButton.setFont(new Font("맑은 고딕", Font.BOLD, 15));
+		panel.add(btnNewButton);
+
 		
+		
+		
+		
+		
+		// 버튼 클릭 시 각 페이지로 이동 할 수 있음 //
+		// 인트로 페이지를 ㄸㅏ로 나눠야 할까... 뒤로 가기를 모르겠음 //
+
 		orderBtn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
