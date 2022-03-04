@@ -93,6 +93,8 @@ public class SalesPage {
 		dayLabel.setBounds(122, 190, 55, 15);
 		dayLabel.setFont(new Font("맑은 고딕", Font.BOLD, 15));
 		panel.add(dayLabel);
+		
+		
 
 		JButton btnNewButton = new JButton("CLICK");
 		btnNewButton.setBounds(464, 180, 100, 30);
